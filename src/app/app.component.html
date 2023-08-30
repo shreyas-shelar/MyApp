@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <div class="logo">Shrine</div>
+</nav>
+<div class="container scroll-container" id="my-scroll-container">
+  <div class="card" *ngFor="let item of items">
+    <img class="card-image" [scrollTarget]="myScrollContainer" [lazyLoad]="item.url" alt="Product Image">
+    <div class="card-details">
+      <div class="card-name">{{item.itemName}}</div>
+      <div class="card-price">${{item.itemPrice}}</div>
+    </div>
+  </div>
+</div>
